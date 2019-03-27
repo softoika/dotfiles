@@ -1,2 +1,9 @@
 #!/usr/bin/env bash -eu
-ln -s $PWD/.tmux.conf $HOME/.tmux.conf
+
+for file in .??*; do
+  [[ $file == ".git" ]] && continue
+  [[ $file == ".gitignore" ]] && continue
+  [[ $file == ".DS_Store" ]] && continue
+  
+  ln -s $file ~/$file
+done
