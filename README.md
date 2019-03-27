@@ -1,4 +1,7 @@
 # Installation
 ```
-$ curl https://github.com/softoika/dotfiles/init.sh | bash
+$ git clone https://github.com/softoika/dotfiles
+$ cd dotfiles
+$ ./init.sh
 ```
+

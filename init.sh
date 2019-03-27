@@ -5,5 +5,5 @@ for file in .??*; do
   [[ $file == ".gitignore" ]] && continue
   [[ $file == ".DS_Store" ]] && continue
   
-  ln -s $file ~/$file
+  ln -fns "${PWD}/${file}" "${HOME}/${file}"
 done
