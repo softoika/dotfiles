@@ -167,6 +167,5 @@ fi
 #if type zprof > /dev/null 2>&1; then
 #  zprof | cat
 #fi
-export PATH=/Users/pc976/.nodebrew/current/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/bin:/Users/pc976/.nodebrew/current/bin:/Users/pc976/.local/bin:/usr/local/opt/mysql@5.7/bin/:/Users/pc976/.pyenv/shims
-
 export NVIM_PYTHON3_HOST_PROG='/Users/pc1170/.pyenv/shims/python3'
+
