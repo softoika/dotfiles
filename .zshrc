@@ -52,6 +52,11 @@ pyenv() {
   pyenv $@
 }
 
+kubectl() {
+  unset -f kubectl
+  eval "$(source <(kubectl completion zsh))"
+  kubectl $@
+}
 
 dirtouch() {
   mkdir -p "$(dirname $1)"
