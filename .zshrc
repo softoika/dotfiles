@@ -27,8 +27,10 @@ alias yr='yarn run'
 export HISTTIMEFORMAT='%F %T '
 # TMUX用色設定
 export TERM='xterm-256color'
-# crontabなどのエディター設定
-export EDITOR=vim
+# gitなどのエディター設定
+export EDITOR=nvim
+# crontab -eで$EDITORのエディタを使う
+export VISUAL=${EDITOR}
 
 # tmux起動時にはPATHを追加しない
 if [[ -z $TMUX ]]; then
