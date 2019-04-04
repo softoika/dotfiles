@@ -39,7 +39,8 @@ if [[ -z $TMUX ]]; then
   export PATH="/usr/local/bin:$PATH"
   export PATH="$HOME/.local/bin:$PATH"
   export PATH=$HOME/.nodebrew/current/bin:$PATH
-  export JAVA_HOME=`/System/Library/Frameworks/JavaVM.framework/Versions/A/Commands/java_home -v "1.8"`
+  # $JAVA_VERSIONは.zprofileでexportする
+  export JAVA_HOME=`/System/Library/Frameworks/JavaVM.framework/Versions/A/Commands/java_home -v "${JAVA_VERSION}"`
   export PATH=${JAVA_HOME}/bin:${PATH}
   # tmuxを自動起動する
   tmux new-session
