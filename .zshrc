@@ -12,6 +12,7 @@ fi
 
 # Customize to your needs...
 alias vi='nvim'
+alias ls='\ls -G'
 alias ll='ls -la'
 alias de='diskutil eject'
 alias ga='git add'
