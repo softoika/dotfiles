@@ -52,6 +52,24 @@ if [[ -z $TMUX ]]; then
   export PATH="/usr/local/bin:$PATH"
   export PATH="$HOME/.local/bin:$PATH"
   export PATH=$HOME/.nodebrew/current/bin:$PATH
+  # coreutils
+  export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
+  export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}"
+  # ed
+  export PATH="/usr/local/opt/ed/libexec/gnubin:${PATH}"
+  export MANPATH="/usr/local/opt/ed/libexec/gnuman:${MANPATH}"
+  # findutils
+  export PATH="/usr/local/opt/findutils/libexec/gnubin:${PATH}"
+  export MANPATH="/usr/local/opt/findutils/libexec/gnuman:${MANPATH}"
+  # sed
+  export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:${PATH}"
+  export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:${MANPATH}"
+  # tar
+  export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:${PATH}"
+  export MANPATH="/usr/local/opt/gnu-tar/libexec/gnuman:${MANPATH}"
+  # grep
+  export PATH="/usr/local/opt/grep/libexec/gnubin:${PATH}"
+  export MANPATH="/usr/local/opt/grep/libexec/gnuman:${MANPATH}"
   # $JAVA_VERSIONは.zprofileでexportする
   export JAVA_HOME=`/System/Library/Frameworks/JavaVM.framework/Versions/A/Commands/java_home -v "${JAVA_VERSION}"`
   export PATH=${JAVA_HOME}/bin:${PATH}
