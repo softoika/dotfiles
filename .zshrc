@@ -33,6 +33,8 @@ alias di='docker images'
 alias ssh='change_tmux_prefix && sshrc'
 alias yr='yarn run'
 alias nr='npm run'
+alias t='tmux'
+alias c='cd ~/Repositories'
 
 # historyに時刻を表示するようにする
 export HISTTIMEFORMAT='%F %T '
