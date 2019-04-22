@@ -98,6 +98,14 @@
       ]
     },
     {
+      "before": ["<leader>", "]"],
+      "commands": [
+        {
+          "command": "references-view.find"
+        }
+      ]
+    },
+    {
       "before": ["<leader>", "r"],
       "commands": [
         {
