@@ -1,5 +1,4 @@
 #!/usr/bin/env bash -eu
-
 for file in .??*; do
   [[ $file == ".git" ]] && continue
   [[ $file == ".gitignore" ]] && continue
@@ -7,3 +6,7 @@ for file in .??*; do
   
   ln -fns "${PWD}/${file}" "${HOME}/${file}"
 done
+
+# VSCode
+ln -fns "${PWD}/vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
+

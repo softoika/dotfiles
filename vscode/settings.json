@@ -1,0 +1,152 @@
+{
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": false,
+  "editor.insertSpaces": true,
+  "editor.fontSize": 10,
+  "window.zoomLevel": 1,
+  "workbench.sideBar.location": "left",
+  "vim.useSystemClipboard": true,
+  "vim.incsearch": true,
+  "vim.ignorecase": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
+  "vim.statusBarColors.insert": "#BF616A",
+  "vim.statusBarColors.visual": "#B48EAD",
+  "vim.statusBarColors.visualline": "#B48EAD",
+  "vim.statusBarColors.visualblock": "#A3BE8C",
+  "vim.statusBarColors.replace": "#D08770",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": [";", ";"],
+      "after": ["<Esc>", "m", "s", "A", ";", "<Esc>", "`", "s", "a"]
+    },
+    {
+      "before": ["<C-e>"],
+      "after": ["<C-o>", "$"]
+    }
+  ],
+  "vim.leader": "<Space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<Enter>"],
+      "after": ["o", "<Esc>"]
+    },
+    {
+      "before": ["<leader>", "<Enter>"],
+      "after": ["O", "<Esc>"]
+    },
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
+    },
+    {
+      "before": ["C-h"],
+      "after": ["C-w", "h"]
+    },
+    {
+      "before": ["C-l"],
+      "after": ["C-w", "l"]
+    },
+    {
+      "before": ["C-k"],
+      "after": ["C-w", "k"]
+    },
+    {
+      "before": ["C-j"],
+      "after": ["C-w", "j"]
+    },
+    {
+      "before": ["<leader>", "j"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["Y"],
+      "after": ["y", "$"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "commands": [
+        {
+          "command": "workbench.action.quickOpen"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": [
+        {
+          "command": "workbench.action.findInFiles"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "i"],
+      "commands": [
+        {
+          "command": "editor.action.quickFix"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "r"],
+      "commands": [
+        {
+          "command": "editor.action.rename"
+        }
+      ]
+    }
+  ],
+  "vim.handleKeys": {
+    "<C-e>": false
+  },
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#8FBCBB",
+    "statusBar.noFolderBackground": "#8FBCBB",
+    "statusBar.debuggingBackground": "#8FBCBB",
+    "statusBar.foreground": "#434C5E"
+  },
+  "zenMode.hideStatusBar": false,
+  "zenMode.hideActivityBar": false,
+  "debug.showInStatusBar": "never",
+  "tsimporter.noStatusBar": true,
+  "diffEditor.renderSideBySide": true,
+  "importSorter.generalConfiguration.sortOnBeforeSave": true,
+  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 140,
+  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimit",
+  "importSorter.importStringConfiguration.tabSize": 2,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "vs-kubernetes": {
+    "vs-kubernetes.helm-path": "/Users/pc1170/.vs-kubernetes/tools/helm/darwin-amd64/helm",
+    "vs-kubernetes.minikube-path": "/Users/pc1170/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+    "vs-kubernetes.draft-path": "/Users/pc1170/.vs-kubernetes/tools/draft/darwin-amd64/draft"
+  },
+  "[scss]": {
+    "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "diffEditor.ignoreTrimWhitespace": false
+}
