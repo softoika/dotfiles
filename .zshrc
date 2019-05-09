@@ -52,7 +52,6 @@ if [[ -z $TMUX ]]; then
   export PATH="/usr/local/opt/mysql@5.7/bin/:$PATH"
   export PATH="/usr/local/bin:$PATH"
   export PATH="$HOME/.local/bin:$PATH"
-  export PATH=$HOME/.nodebrew/current/bin:$PATH
   # coreutils
   export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
   export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}"
@@ -74,6 +73,11 @@ if [[ -z $TMUX ]]; then
   # $JAVA_VERSIONは.zprofileでexportする
   export JAVA_HOME=`/System/Library/Frameworks/JavaVM.framework/Versions/A/Commands/java_home -v "${JAVA_VERSION}"`
   export PATH=${JAVA_HOME}/bin:${PATH}
+  # GRAAL_VERSIONも.zprofile
+  export GRAALVM_HOME="/Library/Java/JavaVirtualMachines/graalvm-ce-${GRAALVM_VERSION}/Contents/Home"
+  export PATH=${JAVA_HOME}/bin:${PATH}
+  # nodebrew
+  export PATH="$HOME/.nodebrew/current/bin:$PATH"
   # tmuxを自動起動する
   tmux new-session
 fi
