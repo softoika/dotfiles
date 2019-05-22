@@ -1,8 +1,8 @@
-inoremap <silent> jj <Esc>
+inoremap  jj <Esc>
 inoremap <C-e> <C-o>$
+inoremap <C-e> <C-o>0
 inoremap <C-b> <C-o>h
 inoremap <C-f> <C-o>l
-nnoremap j gj
-nnoremap k gk
 nnoremap Y y$
 nnoremap <Return> o<ESC>
+
