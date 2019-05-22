@@ -10,3 +10,6 @@ done
 # VSCode
 ln -fns "${PWD}/vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
 
+# Shell Scripts
+ln -fns "${PWD}/bin/" "${HOME}/.local/bin/"
+

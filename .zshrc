@@ -52,6 +52,7 @@ alias nr='npm run'
 alias t='tmux'
 alias c='cd ~/Repositories'
 alias dot='cd ~/Repositories/dotfiles'
+alias brew='brew.sh'
 
 # historyに時刻を表示するようにする
 export HISTTIMEFORMAT='%F %T '
