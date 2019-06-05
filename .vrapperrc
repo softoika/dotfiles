@@ -1,0 +1,16 @@
+let mapleader = "<Space>"
+
+eclipseaction FindRef org.eclipse.jdt.ui.edit.text.java.search.references.in.workspace
+nnoremap <leader>] :FindRef<CR>
+
+eclipseaction Rename org.eclipse.ui.edit.rename
+nnoremap <leader>r :Rename<CR>
+
+inoremap  jj <Esc>
+inoremap <C-e> <C-o>$
+inoremap <C-e> <C-o>0
+inoremap <C-b> <C-o>h
+inoremap <C-f> <C-o>l
+nnoremap Y y$
+nnoremap <Return> o<ESC>
+
