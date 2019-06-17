@@ -14,6 +14,8 @@ fi
 alias vi='nvim'
 alias ls='\ls -G'
 alias ll='ls -la'
+alias G='grep'
+alias g='git'
 alias ga='git add'
 alias gaa='git add -A'
 alias gc='git commit'

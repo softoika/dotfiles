@@ -1,0 +1,7 @@
+set blob-view-line-number = yes
+set blame-view-line-number = yes
+set refresh-mode = auto
+set ignore-case = true
+bind generic <Ctrl-f> move-page-down
+bind generic <Ctrl-b> move-page-up
+
