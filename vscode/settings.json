@@ -112,6 +112,14 @@
           "command": "editor.action.rename"
         }
       ]
+    },
+    {
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    {
+      "before": ["<C-r>"],
+      "commands": ["redo"]
     }
   ],
   "vim.handleKeys": {
