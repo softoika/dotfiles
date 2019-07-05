@@ -164,5 +164,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.formatOnSave": true,
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "liveshare.showInStatusBar": "never",
+  "workbench.statusBar.feedback.visible": false,
+  "gitlens.mode.statusBar.enabled": false,
+  "gitlens.statusBar.enabled": false
 }
