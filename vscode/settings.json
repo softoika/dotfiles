@@ -10,7 +10,7 @@
   "vim.ignorecase": true,
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
-  "vim.statusBarColorControl": true,
+  "vim.statusBarColorControl": false,
   "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
   "vim.statusBarColors.insert": "#BF616A",
   "vim.statusBarColors.visual": "#B48EAD",
@@ -166,7 +166,6 @@
   "editor.formatOnSave": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "liveshare.showInStatusBar": "never",
-  "workbench.statusBar.feedback.visible": false,
   "gitlens.mode.statusBar.enabled": false,
   "gitlens.statusBar.enabled": false
 }
