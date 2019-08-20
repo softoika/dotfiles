@@ -66,6 +66,7 @@ lua
 lua@5.1
 luajit
 luarocks
+lzo
 maven
 mongodb
 mpfr
@@ -75,7 +76,6 @@ ncurses
 neovim
 nettle
 nkf
-node
 nodebrew
 oniguruma
 opencore-amr

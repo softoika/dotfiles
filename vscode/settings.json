@@ -167,5 +167,12 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "liveshare.showInStatusBar": "never",
   "gitlens.mode.statusBar.enabled": false,
-  "gitlens.statusBar.enabled": false
+  "gitlens.statusBar.enabled": false,
+  "java.errors.incompleteClasspath.severity": "ignore",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  }
 }
