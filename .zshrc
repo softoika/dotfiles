@@ -14,6 +14,7 @@ fi
 alias vi='nvim'
 alias ls='\ls -G'
 alias ll='ls -la'
+alias grep="rg" # ripgrep
 alias G='grep'
 alias g='git'
 alias ga='git add'
@@ -99,6 +100,8 @@ if [[ -z $TMUX ]]; then
   export PATH=${JAVA_HOME}/bin:${PATH}
   # nodebrew
   export PATH="$HOME/.nodebrew/current/bin:$PATH"
+  # pyenvを実行しておく(pythonのパスを通しておくため)
+  pyenv
   # tmuxを自動起動する
   tmux new-session
 fi

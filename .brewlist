@@ -76,11 +76,13 @@ ncurses
 neovim
 nettle
 nkf
+node
 nodebrew
 oniguruma
 opencore-amr
 openjpeg
 openssl
+openssl@1.1
 opus
 p11-kit
 pango
@@ -104,6 +106,7 @@ sqlite
 sshrc
 stern
 tesseract
+the_silver_searcher
 theora
 tig
 tmux
