@@ -1,5 +1,7 @@
 #!/usr/bin/env bash 
 
+# The brew command that can be used like npm (e.g. `npm i``)
+
 BREWLIST_DIR="${HOME}/Repositories/dotfiles"
 BREWLIST_PATH="${BREWLIST_DIR}/.brewlist"
 PACKAGES=${@:2:($#-1)}
@@ -31,6 +33,10 @@ if [[ $1 = "install" ]]; then
             brew list > $BREWLIST_PATH
         fi
     fi
+elif [[ $1 = "uninstall" ]]; then
+    brew uninstall $PACKAGES
+    echo Updating .brewlist ...
+    brew list > $BREWLIST_PATH
 else
     brew $@
 fi
