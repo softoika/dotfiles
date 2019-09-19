@@ -152,11 +152,6 @@
   },
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "vs-kubernetes": {
-    "vs-kubernetes.helm-path": "/Users/pc1170/.vs-kubernetes/tools/helm/darwin-amd64/helm",
-    "vs-kubernetes.minikube-path": "/Users/pc1170/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
-    "vs-kubernetes.draft-path": "/Users/pc1170/.vs-kubernetes/tools/draft/darwin-amd64/draft"
-  },
   "[scss]": {
     "editor.tabSize": 2
   },
@@ -174,5 +169,6 @@
     "**/.project": true,
     "**/.settings": true,
     "**/.factorypath": true
-  }
+  },
+  "gitlens.views.repositories.files.layout": "list"
 }

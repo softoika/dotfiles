@@ -1,12 +1,6 @@
 [core]
 	excludesfile = /Users/pc976/.gitignore_global
 	editor = nvim -c \"set fenc=utf-8\"
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Users/pc976/Downloads/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [user]
 	name = r-hanafusa
 	email = r_hanafusa@dreamarts.co.jp
@@ -14,3 +8,5 @@
 	autosquash = true
 [hub]
 	host = stainless.dreamarts.co.jp
+[icdiff]
+	options = --highlight --line-numbers
