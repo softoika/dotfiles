@@ -78,7 +78,9 @@ export EDITOR=nvim
 # crontab -eで$EDITORのエディタを使う
 export VISUAL=${EDITOR}
 
+### fzf settings ###
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+export FZF_CTRL_R_OPTS='--sort --exact'
 
 # fbr - checkout git branch (including remote branches)
 fbr() {
@@ -88,6 +90,26 @@ fbr() {
            fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
   git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }
+
+# fuzzy git add (https://qiita.com/reviry/items/e798da034955c2af84c5)
+fad() {
+  local out q n addfiles
+  while out=$(
+      git status --short |
+      awk '{if (substr($0,2,1) !~ / /) print $2}' |
+      fzf-tmux --multi --exit-0 --expect=ctrl-d); do
+    q=$(head -1 <<< "$out")
+    n=$[$(wc -l <<< "$out") - 1]
+    addfiles=(`echo $(tail "-$n" <<< "$out")`)
+    [[ -z "$addfiles" ]] && continue
+    if [ "$q" = ctrl-d ]; then
+      git diff --color=always $addfiles | less -R
+    else
+      git add $addfiles
+    fi
+  done
+}
+### fzf settings ###
 
 # tmux起動時にはPATHを追加しない
 if [[ -z $TMUX ]]; then
