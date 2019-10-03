@@ -15,6 +15,7 @@ fontforge
 freetype
 frei0r
 fribidi
+fzf
 gawk
 gdbm
 gettext
