@@ -78,6 +78,17 @@ export EDITOR=nvim
 # crontab -eで$EDITORのエディタを使う
 export VISUAL=${EDITOR}
 
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+
+# fbr - checkout git branch (including remote branches)
+fbr() {
+  local branches branch
+  branches=$(git branch --all | grep -v HEAD) &&
+  branch=$(echo "$branches" |
+           fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+  git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+}
+
 # tmux起動時にはPATHを追加しない
 if [[ -z $TMUX ]]; then
   export PATH="$HOME/.pyenv/shims:$PATH"
@@ -241,6 +252,7 @@ elif type compctl &>/dev/null; then
 fi
 ###-end-npm-completion-###
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #if type zprof > /dev/null 2>&1; then
 #  zprof | cat
