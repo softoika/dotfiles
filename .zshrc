@@ -10,7 +10,32 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
     source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+dirtouch() {
+  mkdir -p "$(dirname $1)"
+  touch "$1"
+}
+
+change_tmux_prefix() {
+  tmux set-option -g prefix C-t
+  tmux unbind-key C-g
+  #trap "tmux set-option -g prefix C-g && tmux unbind-key C-t" EXIT
+}
+
+revert_tmux_prefix() {
+  tmux set-option -g prefix C-g
+  tmux unbind-key C-t
+}
+
+# 必要のないブランチを全て削除する
+git_branch_delete() {
+  git fetch -p && for branch in $(git branch -vv --no-color | grep ': gone]' | awk '{print $1}'); do git branch -D $branch; done
+}
+
+# git pull and copy '${commit hash #1}..${commit hash #2}'
+git_pull_diff_copy() {
+  git pull | head -n 1 | awk '{ print $2 }' | pbcopy
+}
+
 alias vi='nvim'
 alias ls='\ls -G'
 alias ll='ls -la'
@@ -32,7 +57,7 @@ alias gmr='git merge'
 alias gmv='git mv'
 alias gp='git push'
 alias gps='git push'
-alias gpl='git pull'
+alias gpl='git_pull_diff_copy'
 alias grb='git rebase'
 alias grm='git rm'
 alias grs='git reset'
@@ -68,6 +93,7 @@ alias tls='tmux ls'
 alias c='cd ~/Repositories'
 alias dot='cd ~/Repositories/dotfiles'
 alias brew='brew.sh'
+alias touch='dirtouch'
 
 # historyに時刻を表示するようにする
 export HISTTIMEFORMAT='%F %T '
@@ -160,28 +186,6 @@ kubectl() {
   unset -f kubectl
   eval "$(source <(kubectl completion zsh))"
   kubectl $@
-}
-
-dirtouch() {
-  mkdir -p "$(dirname $1)"
-  touch "$1"
-}
-alias touch='dirtouch'
-
-change_tmux_prefix() {
-  tmux set-option -g prefix C-t
-  tmux unbind-key C-g
-  #trap "tmux set-option -g prefix C-g && tmux unbind-key C-t" EXIT
-}
-
-revert_tmux_prefix() {
-  tmux set-option -g prefix C-g
-  tmux unbind-key C-t
-}
-
-# 必要のないブランチを全て削除する
-git_branch_delete() {
-  git fetch -p && for branch in $(git branch -vv --no-color | grep ': gone]' | awk '{print $1}'); do git branch -D $branch; done
 }
 
 autoload -Uz compinit
