@@ -122,6 +122,12 @@
       "commands": ["redo"]
     }
   ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.quickOpen"]
+    }
+  ],
   "vim.handleKeys": {
     "<C-e>": false
   },
