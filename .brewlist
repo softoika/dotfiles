@@ -59,6 +59,7 @@ libtool
 libuninameslist
 libunistring
 libuv
+libvidstab
 libvorbis
 libvpx
 libvterm
@@ -95,7 +96,6 @@ pyenv
 python
 python@2
 readline
-ricty
 ripgrep
 rtmpdump
 rubberband
