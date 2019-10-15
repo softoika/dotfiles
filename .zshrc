@@ -36,6 +36,14 @@ git_pull_diff_copy() {
   git pull | head -n 1 | awk '{ print $2 }' | pbcopy
 }
 
+# Shortcut of ffmpeg use case which convert video to gif
+# Example: to_gif foo.mov
+to_gif() {
+  v=$1
+  f=$(echo $v | sed -r 's/(.+)\.mov$/\1/')
+  ffmpeg -i $v -r 10 -vf scale=1024:-1 "${f}.gif"
+}
+
 alias vi='nvim'
 alias ls='\ls -G'
 alias ll='ls -la'
