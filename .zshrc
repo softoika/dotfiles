@@ -10,6 +10,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
     source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+source "${HOME}/.java_home.zsh"
+
 dirtouch() {
   mkdir -p "$(dirname $1)"
   touch "$1"
@@ -169,10 +171,7 @@ if [[ -z $TMUX ]]; then
   # grep
   export PATH="/usr/local/opt/grep/libexec/gnubin:${PATH}"
   export MANPATH="/usr/local/opt/grep/libexec/gnuman:${MANPATH}"
-  # $JAVA_VERSIONは.zprofileでexportする
-  export JAVA_HOME=`/System/Library/Frameworks/JavaVM.framework/Versions/A/Commands/java_home -v "${JAVA_VERSION}"`
   export PATH=${JAVA_HOME}/bin:${PATH}
-  # GRAAL_VERSIONも.zprofile
   export GRAALVM_HOME="/Library/Java/JavaVirtualMachines/graalvm-ce-${GRAALVM_VERSION}/Contents/Home"
   export PATH=${JAVA_HOME}/bin:${PATH}
   # nodebrew
