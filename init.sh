@@ -9,6 +9,7 @@ done
 
 # VSCode
 ln -fns "${PWD}/vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
+ln -fns "${PWD}/vscode/keybindings.json" "${HOME}/Library/Application Support/Code/User/keybindings.json"
 
 # Shell Scripts
 ln -fns "${PWD}/bin" "${HOME}/.local/bin"

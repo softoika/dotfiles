@@ -1,0 +1,19 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+shift+v",
+        "command": "toggle",
+    	"when": "editorTextFocus",
+    	"args": {
+    		"id": "vim",
+    		"value": [
+    			{
+                    "vim.disableExtension": true
+    			},
+    			{
+                    "vim.disableExtension": false
+    			}
+    		]
+    	}
+    }
+]

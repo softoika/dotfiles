@@ -10,7 +10,7 @@
   "vim.ignorecase": true,
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
-  "vim.statusBarColorControl": false,
+  "vim.statusBarColorControl": true,
   "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
   "vim.statusBarColors.insert": "#BF616A",
   "vim.statusBarColors.visual": "#B48EAD",
@@ -176,5 +176,6 @@
     "**/.settings": true,
     "**/.factorypath": true
   },
-  "gitlens.views.repositories.files.layout": "list"
+  "gitlens.views.repositories.files.layout": "list",
+  "vim.disableExtension": false
 }
