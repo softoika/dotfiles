@@ -35,7 +35,7 @@ git_branch_delete() {
 
 # git pull and copy '${commit hash #1}..${commit hash #2}'
 git_pull_diff_copy() {
-  git pull | tee >(xargs -I@ echo @) | head -n 1 | awk '{ print $2 }' | pbcopy
+  git pull | tee >(xargs -I@ echo @ 1>&2) | head -n 1 | awk '{ print $2 }' | pbcopy
 }
 
 # Shortcut of ffmpeg use case which convert video to gif
