@@ -41,6 +41,16 @@ git_pull_diff_copy() {
     echo Copied commit hashes of diff by git pull
 }
 
+git_checkout_with_stash_list() {
+    git checkout $@
+    current_branch=$(git rev-parse --abbrev-ref HEAD)
+    stash=$(git stash list | grep $current_branch)
+    if [[ $stash != "" ]]; then
+        echo -e "\n${current_branch} has some git stashes" 
+        echo $stash
+    fi
+}
+
 # Shortcut of ffmpeg use case which convert video to gif
 # Example: to_gif foo.mov
 to_gif() {
@@ -60,7 +70,7 @@ alias gaa='git add -A'
 alias gbi='git bisect'
 alias gbr='git branch'
 alias gc='git commit'
-alias gch='git checkout'
+alias gch='git_checkout_with_stash_list'
 alias gs='git status'
 alias gst='git stash'
 alias gl='git log'
