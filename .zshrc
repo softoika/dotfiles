@@ -43,7 +43,9 @@ git_pull_diff_copy() {
 
 git_checkout_with_stash_list() {
     git checkout $@
-    current_branch=$(git rev-parse --abbrev-ref HEAD)
+    # Remove characters before '/' because they are trimmed in git stash list.
+    # ex. 'feature/branch_name' -> 'branch_name'
+    current_branch=$(git rev-parse --abbrev-ref HEAD | gsed -r 's|.+/(.+)|\1|')
     stash=$(git stash list | grep $current_branch)
     if [[ $stash != "" ]]; then
         echo -e "\n${current_branch} has some git stashes" 
