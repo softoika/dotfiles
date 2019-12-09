@@ -51,6 +51,11 @@ git_checkout_with_stash_list() {
     fi
 }
 
+git_push_upstream() {
+    current_branch=$(git rev-parse --abbrev-ref HEAD)
+    git push -u origin $current_branch
+}
+
 # Shortcut of ffmpeg use case which convert video to gif
 # Example: to_gif foo.mov
 to_gif() {
@@ -80,6 +85,7 @@ alias gmr='git merge'
 alias gmv='git mv'
 alias gp='git push'
 alias gps='git push'
+alias gpu='git_push_upstream'
 alias gpl='git_pull_diff_copy'
 alias grb='git rebase'
 alias grm='git rm'
