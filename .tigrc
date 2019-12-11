@@ -4,4 +4,9 @@ set refresh-mode = auto
 set ignore-case = true
 bind generic <Ctrl-f> move-page-down
 bind generic <Ctrl-b> move-page-up
+bind generic E      view-grep
+# Move first/last line like the less
+bind generic g      move-first-line
+bind generic G      move-last-line
+bind main    G      move-last-line
 
