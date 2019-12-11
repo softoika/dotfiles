@@ -142,11 +142,19 @@ export FZF_CTRL_R_OPTS='--sort --exact'
 
 # fbr - checkout git branch (including remote branches)
 fbr() {
+  local query=$1
   local branches branch
   branches=$(git branch --all | grep -v HEAD) &&
-  branch=$(echo "$branches" |
-           fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
-  gch $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+  if [[ $query != "" ]]; then
+    branch=$(echo "$branches" |
+             fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m -q $query)
+  else
+    branch=$(echo "$branches" |
+             fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m)
+  fi
+  if [[ $? -eq 0 ]]; then
+    gch $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+  fi
 }
 
 # fuzzy git add (https://qiita.com/reviry/items/e798da034955c2af84c5)
