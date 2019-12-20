@@ -177,5 +177,6 @@
     "**/.factorypath": true
   },
   "gitlens.views.repositories.files.layout": "list",
-  "vim.disableExtension": false
+  "vim.disableExtension": false,
+  "html.mirrorCursorOnMatchingTag": false
 }
