@@ -178,5 +178,6 @@
   },
   "gitlens.views.repositories.files.layout": "list",
   "vim.disableExtension": false,
-  "html.mirrorCursorOnMatchingTag": false
+  "html.mirrorCursorOnMatchingTag": false,
+  "typescript.preferences.importModuleSpecifier": "relative"
 }
