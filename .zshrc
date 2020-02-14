@@ -63,6 +63,16 @@ to_gif() {
   ffmpeg -i $v -r 10 -vf scale=1024:-1 "${f}.gif"
 }
 
+debug_chrome() {
+  local port
+  if [[ -p /dev/stdin ]]; then 
+    port=$(cat -)
+  else
+    port=9222
+  fi
+  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=$port
+}
+
 alias vi='nvim'
 alias ls='\ls -G'
 alias ll='ls -la'
