@@ -226,6 +226,10 @@ if [[ -z $TMUX ]]; then
   export PATH=${JAVA_HOME}/bin:${PATH}
   # nodebrew
   export PATH="$HOME/.nodebrew/current/bin:$PATH"
+  # llvm
+  export PATH="/usr/local/opt/llvm/bin:$PATH"
+  export LDFLAGS="-L/usr/local/opt/llvm/lib"
+  export CPPFLAGS="-I/usr/local/opt/llvm/include"
   # pyenvを実行しておく(pythonのパスを通しておくため)
   pyenv
   # tmuxを自動起動する
