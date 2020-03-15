@@ -30,6 +30,7 @@ graphite2
 grep
 gzip
 harfbuzz
+helm
 htop
 hub
 icu4c
@@ -66,12 +67,15 @@ libvorbis
 libvpx
 libvterm
 little-cms2
+llvm
 lua
 lua@5.1
 luajit
 luarocks
 lzo
 maven
+mecab
+mecab-ipadic
 mongodb
 mpfr
 msgpack
@@ -83,6 +87,7 @@ nkf
 nodebrew
 oniguruma
 opencore-amr
+openjdk
 openjpeg
 openssl
 openssl@1.1
@@ -97,6 +102,7 @@ pkg-config
 pyenv
 python
 python@2
+python@3.8
 readline
 ricty
 ripgrep
@@ -117,6 +123,7 @@ tmux
 tree
 unbound
 unibilium
+utf8proc
 watch
 webp
 wget
