@@ -26,6 +26,7 @@ gmp
 gnu-sed
 gnu-tar
 gnutls
+go
 graphite2
 grep
 gzip
