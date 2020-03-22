@@ -230,6 +230,9 @@ if [[ -z $TMUX ]]; then
   export PATH="/usr/local/opt/llvm/bin:$PATH"
   export LDFLAGS="-L/usr/local/opt/llvm/lib"
   export CPPFLAGS="-I/usr/local/opt/llvm/include"
+  # go
+  export GOPATH="${HOME}/go"
+  export PATH="${GOPATH}/bin:${PATH}"
   # pyenvを実行しておく(pythonのパスを通しておくため)
   pyenv
   # tmuxを自動起動する
