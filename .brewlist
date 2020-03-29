@@ -67,6 +67,7 @@ libvidstab
 libvorbis
 libvpx
 libvterm
+libyaml
 little-cms2
 llvm
 lua
@@ -97,6 +98,7 @@ p11-kit
 pango
 pcre
 pcre2
+perl
 pipenv
 pixman
 pkg-config
@@ -109,6 +111,7 @@ ricty
 ripgrep
 rtmpdump
 rubberband
+ruby
 sdl2
 snappy
 speex
@@ -125,6 +128,7 @@ tree
 unbound
 unibilium
 utf8proc
+vim
 watch
 webp
 wget
