@@ -155,7 +155,7 @@ export EDITOR=nvim
 export VISUAL=${EDITOR}
 
 ### fzf settings ###
-export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git/*"'
 export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 export FZF_CTRL_R_OPTS='--sort --exact'
@@ -233,6 +233,8 @@ if [[ -z $TMUX ]]; then
   # go
   export GOPATH="${HOME}/go"
   export PATH="${GOPATH}/bin:${PATH}"
+  # vim-themis
+  export PATH="${HOME}/Repositories/vim-themis/bin:${PATH}"
   # pyenvを実行しておく(pythonのパスを通しておくため)
   pyenv
   # tmuxを自動起動する
