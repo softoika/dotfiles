@@ -10,3 +10,5 @@
 	host = stainless.dreamarts.co.jp
 [icdiff]
 	options = --highlight --line-numbers
+[alias]
+	ch = checkout
