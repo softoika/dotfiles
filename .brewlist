@@ -5,6 +5,7 @@ bash
 cairo
 cmake
 coreutils
+deno
 diffutils
 ed
 ffmpeg
@@ -19,6 +20,7 @@ fzf
 gawk
 gdbm
 gettext
+gh
 giflib
 git
 glib
@@ -116,6 +118,7 @@ sdl2
 snappy
 speex
 sqlite
+srt
 sshrc
 stern
 swig
