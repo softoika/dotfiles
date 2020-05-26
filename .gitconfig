@@ -1,6 +1,8 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = nvim -c \"set fenc=utf-8\"
+    commentChar = ">"
+    pager = delta --plus-color="#013800" --plus-emph-color="#016800" --minus-color="#440001" --minus-emph-color="#740001" --theme='Monokai Extended'
 [user]
 	name = r-hanafusa
 	email = r_hanafusa@dreamarts.co.jp
@@ -10,5 +12,7 @@
 	host = stainless.dreamarts.co.jp
 [icdiff]
 	options = --highlight --line-numbers
+[interactive]
+    diffFilter = delta --color-only
 [alias]
 	ch = checkout

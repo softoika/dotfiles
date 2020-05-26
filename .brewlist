@@ -1,11 +1,14 @@
 aom
 autoconf
+automake
 azure-cli
 bash
 cairo
+carthage
 cmake
 coreutils
 deno
+dav1d
 diffutils
 ed
 ffmpeg
@@ -23,6 +26,7 @@ gettext
 gh
 giflib
 git
+git-delta
 glib
 gmp
 gnu-sed
@@ -37,6 +41,7 @@ helm
 htop
 hub
 icu4c
+ios-webkit-debug-proxy
 isl
 jemalloc
 jpeg
@@ -51,8 +56,10 @@ libbluray
 libevent
 libffi
 libidn2
+libimobiledevice
 libmpc
 libogg
+libplist
 libpng
 libsamplerate
 libsndfile
@@ -64,11 +71,14 @@ libtiff
 libtool
 libuninameslist
 libunistring
+libusb
+libusbmuxd
 libuv
 libvidstab
 libvorbis
 libvpx
 libvterm
+libxml2
 libyaml
 little-cms2
 llvm
