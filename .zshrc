@@ -77,6 +77,7 @@ alias vi='nvim'
 alias ls='\ls -G'
 alias ll='ls -la'
 alias grep="rg" # ripgrep
+alias cat="bat"
 alias G='grep'
 alias g='git'
 alias ga='git add'
@@ -141,6 +142,7 @@ alias repo='cd ~/Repositories'
 alias dot='cd ~/Repositories/dotfiles'
 alias shop='cd ~/Repositories/shoprun/Stores/ngapp'
 alias nv='cd ~/Repositories/nvim'
+alias dow="cd ~/Downloads"
 alias brew='brew.sh'
 alias touch='dirtouch'
 
