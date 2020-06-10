@@ -3,11 +3,11 @@ autoconf
 automake
 azure-cli
 bash
+bat
 cairo
 carthage
 cmake
 coreutils
-deno
 dav1d
 diffutils
 ed
