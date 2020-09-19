@@ -75,7 +75,7 @@ debug_chrome() {
 
 alias vi='nvim'
 alias ls='exa'
-alias ll='exa -la'
+alias ll='exa -la --icons'
 alias grep="rg" # ripgrep
 alias cat="bat"
 alias G='grep'
