@@ -15,4 +15,19 @@
 [interactive]
     diffFilter = delta --color-only
 [alias]
+    a = add
+    bi = bisect
+    br = branch
+    c = commit
 	ch = checkout
+    d = diff
+    l = log
+    mr = merge
+    p = push
+    pl = pull
+    r = restore
+    rb = rebase
+    rs = reset
+    s = status
+    st = stash
+
