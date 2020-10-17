@@ -14,6 +14,9 @@
 	options = --highlight --line-numbers
 [interactive]
     diffFilter = delta --color-only
+[delta]
+	features = side-by-side line-numbers
+	whitespace-error-style = 22 reverse
 [alias]
     a = add
     bi = bisect
