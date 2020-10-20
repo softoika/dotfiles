@@ -1,6 +1,7 @@
 aom
 autoconf
 automake
+azure-cli
 bash
 bat
 bdw-gc
@@ -16,6 +17,7 @@ exa
 ffmpeg
 findutils
 flac
+fnm
 fontconfig
 fontforge
 freetype
@@ -29,6 +31,7 @@ gh
 giflib
 git
 git-delta
+git-lfs
 glib
 gmp
 gnu-sed
@@ -91,8 +94,10 @@ lua@5.1
 luajit
 luarocks
 lzo
+maven
 mecab
 mecab-ipadic
+mongodb
 mpfr
 msgpack
 mysql@5.7
@@ -105,7 +110,6 @@ oniguruma
 opencore-amr
 openjdk
 openjpeg
-openssl
 openssl@1.1
 opus
 p11-kit
@@ -119,6 +123,7 @@ pkg-config
 pyenv
 python@2
 python@3.8
+python@3.9
 rav1e
 readline
 ricty
