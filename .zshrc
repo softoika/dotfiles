@@ -226,8 +226,8 @@ if [[ -z $TMUX ]]; then
   export PATH=${JAVA_HOME}/bin:${PATH}
   export GRAALVM_HOME="/Library/Java/JavaVirtualMachines/graalvm-ce-${GRAALVM_VERSION}/Contents/Home"
   export PATH=${JAVA_HOME}/bin:${PATH}
-  # nodebrew
-  export PATH="$HOME/.nodebrew/current/bin:$PATH"
+  # fnm
+  export PATH="$HOME/.fnm/current/bin:$PATH"
   # llvm
   export PATH="/usr/local/opt/llvm/bin:$PATH"
   export LDFLAGS="-L/usr/local/opt/llvm/lib"
