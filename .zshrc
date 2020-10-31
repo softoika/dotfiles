@@ -227,7 +227,8 @@ if [[ -z $TMUX ]]; then
   export GRAALVM_HOME="/Library/Java/JavaVirtualMachines/graalvm-ce-${GRAALVM_VERSION}/Contents/Home"
   export PATH=${JAVA_HOME}/bin:${PATH}
   # fnm
-  export PATH="$HOME/.fnm/current/bin:$PATH"
+  export PATH=/Users/r_hanafusa/.fnm:$PATH
+  eval "`fnm env`"
   # llvm
   export PATH="/usr/local/opt/llvm/bin:$PATH"
   export LDFLAGS="-L/usr/local/opt/llvm/lib"
@@ -351,3 +352,4 @@ fi
 #if type zprof > /dev/null 2>&1; then
 #  zprof | cat
 #fi
+
