@@ -4,8 +4,8 @@
     commentChar = ">"
     pager = delta --plus-color="#013800" --plus-emph-color="#016800" --minus-color="#440001" --minus-emph-color="#740001" --theme='Monokai Extended'
 [user]
-	name = r-hanafusa
-	email = r_hanafusa@dreamarts.co.jp
+	name = softoika
+	email = zwgntz@gmail.com
 [rebase]
 	autosquash = true
 [hub]
