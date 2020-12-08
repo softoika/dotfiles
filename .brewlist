@@ -5,6 +5,7 @@ azure-cli
 bash
 bat
 bdw-gc
+c-ares
 cairo
 carthage
 cmake
@@ -13,7 +14,9 @@ dav1d
 deno
 diffutils
 ed
+emscripten
 exa
+fd
 ffmpeg
 findutils
 flac
@@ -32,6 +35,7 @@ giflib
 git
 git-delta
 git-lfs
+gitui
 glib
 gmp
 gnu-sed
@@ -50,6 +54,7 @@ hub
 icu4c
 ios-webkit-debug-proxy
 isl
+jansson
 jemalloc
 jpeg
 jq
@@ -60,6 +65,7 @@ lame
 leptonica
 libass
 libbluray
+libev
 libevent
 libffi
 libidn2
@@ -104,7 +110,9 @@ mysql@5.7
 ncurses
 neovim
 nettle
+nghttp2
 nkf
+node
 nodebrew
 oniguruma
 opencore-amr
@@ -145,6 +153,7 @@ theora
 tig
 tmux
 tree
+tree-sitter
 unbound
 unibilium
 utf8proc
@@ -156,4 +165,5 @@ x264
 x265
 xvid
 xz
+yuicompressor
 zsh
