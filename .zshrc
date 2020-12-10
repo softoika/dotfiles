@@ -78,6 +78,7 @@ alias ls='exa'
 alias ll='exa -la --icons'
 alias grep="rg" # ripgrep
 alias cat="bat"
+alias echo="gecho"
 alias G='grep'
 alias g='git'
 alias ga='git add'
