@@ -229,7 +229,6 @@ if [[ -z $TMUX ]]; then
   export PATH=${JAVA_HOME}/bin:${PATH}
   # fnm
   export PATH=/Users/r_hanafusa/.fnm:$PATH
-  eval "`fnm env`"
   # llvm
   export PATH="/usr/local/opt/llvm/bin:$PATH"
   export LDFLAGS="-L/usr/local/opt/llvm/lib"
@@ -244,6 +243,9 @@ if [[ -z $TMUX ]]; then
   # tmuxを自動起動する
   tmux new-session
 fi
+
+# fnm setup
+eval "$(fnm env)"
 
 # pyenvが呼ばれたときに初期化するようにする
 pyenv() {
