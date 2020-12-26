@@ -200,6 +200,28 @@ fad() {
 }
 ### fzf settings ###
 
+# macOSかつApple Silliconのとき(archコマンドがある)
+if [[ "${(L)$( uname -s )}" == darwin ]] && (( $+commands[arch] )); then
+  setopt magic_equal_subst
+  typeset -U path PATH
+  path=(
+    /opt/homebrew/bin(N-/)
+    /usr/local/bin(N-/)
+    $path
+  )
+  alias brew="arch -arch x86_64 /usr/local/bin/brew"
+  alias x64='exec arch -arch x86_64 "$SHELL"'
+  alias a64='exec arch -arch arm64e "$SHELL"'
+  switch-arch() {
+    if [[ "$(uname -m)" == arm64 ]]; then
+      arch=x86_64
+    else
+      arch=arm64e
+    fi
+    exec arch -arch $arch "$SHELL"
+  }
+fi
+
 # tmux起動時にはPATHを追加しない
 if [[ -z $TMUX ]]; then
   export PATH="$HOME/.pyenv/shims:$PATH"
