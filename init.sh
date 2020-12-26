@@ -9,8 +9,11 @@ for file in .??*; do
 done
 
 # VSCode
-ln -fns "${PWD}/vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
-ln -fns "${PWD}/vscode/keybindings.json" "${HOME}/Library/Application Support/Code/User/keybindings.json"
+vscode_dir="${HOME}/Library/Application Support/Code/User"
+if [[ -d $vscode_dir ]]; then
+  ln -fns "${PWD}/vscode/settings.json" "${vscode_dir}/settings.json"
+  ln -fns "${PWD}/vscode/keybindings.json" "${vscode_dir}/keybindings.json"
+fi
 
 # Shell Scripts
 ln -fns "${PWD}/bin" "${HOME}/.local/bin"
@@ -36,3 +39,11 @@ for directory in $(find .config -mindepth 1 -maxdepth 1 -type d); do
   echo Create $directory symbolic link
   ln -fns "${PWD}/${directory}" "${HOME}/.config"
 done
+
+# tmux plugins ~/.tmux/plugins/tpm/tpm
+tmux_plugins="${HOME}/.tmux/plugins"
+if [[ ! -d $tmux_plugins ]]; then
+  mkdir -p $tmux_plugins
+fi
+cd $tmux_plugins
+git clone --depth 1 https://github.com/tmux-plugins/tpm
