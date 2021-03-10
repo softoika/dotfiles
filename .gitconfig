@@ -41,3 +41,5 @@
 	smudge = git-lfs smudge -- %f
 [pull]
 	rebase = false
+[includeIf "gitdir:~/Repositories/da.shoprun/"]
+    path = ~/.gitconfig_da
