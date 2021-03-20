@@ -74,8 +74,8 @@ debug_chrome() {
 }
 
 alias vi='nvim'
-alias ls='exa'
-alias ll='exa -la --icons'
+alias ls='lsd'
+alias ll='lsd -la'
 alias grep="rg" # ripgrep
 alias cat="bat"
 alias echo="gecho"
