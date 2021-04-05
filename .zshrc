@@ -285,14 +285,6 @@ kubectl() {
   kubectl $@
 }
 
-autoload -Uz compinit
-if [ $(date +'%j') != $(/usr/bin/stat -f '%Sm' -t '%j' ${ZDOTDIR:-$HOME}/.zcompdump) ]; then
-  compinit
-  compdump
-else
-  compinit -C
-fi
-
 _python_argcomplete() {
     local IFS=$'\013'
     local SUPPRESS_SPACE=0
