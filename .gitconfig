@@ -33,6 +33,7 @@
     rs = reset
     s = status
     st = stash
+    sw = switch
 
 [filter "lfs"]
 	process = git-lfs filter-process
