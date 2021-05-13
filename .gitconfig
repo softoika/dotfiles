@@ -23,6 +23,7 @@
     br = branch
     c = commit
 	ch = checkout
+    cp = cherry-pick
     d = diff
     l = log
     mr = merge
