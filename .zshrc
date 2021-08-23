@@ -150,6 +150,7 @@ alias da="cd ~/Repositories/da.shoprun"
 alias shop='cd ~/Repositories/da.shoprun/shoprun/Stores/ngapp'
 alias nv='cd ~/Repositories/nvim'
 alias dow="cd ~/Downloads"
+alias doc="cd ~/Documents"
 alias brew='brew.sh'
 alias touch='dirtouch'
 
