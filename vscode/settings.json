@@ -3,7 +3,6 @@
   "editor.minimap.enabled": false,
   "editor.insertSpaces": true,
   "editor.fontSize": 10,
-  "window.zoomLevel": 1,
   "workbench.sideBar.location": "left",
   "vim.useSystemClipboard": true,
   "vim.incsearch": true,
@@ -140,13 +139,11 @@
   "zenMode.hideStatusBar": false,
   "zenMode.hideActivityBar": false,
   "debug.showInStatusBar": "never",
-  "tsimporter.noStatusBar": true,
   "diffEditor.renderSideBySide": true,
-  "importSorter.generalConfiguration.sortOnBeforeSave": true,
-  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 140,
-  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimit",
-  "importSorter.importStringConfiguration.tabSize": 2,
   "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
@@ -157,7 +154,6 @@
     "editor.tabSize": 2
   },
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "[scss]": {
     "editor.tabSize": 2
   },
@@ -169,7 +165,6 @@
   "liveshare.showInStatusBar": "never",
   "gitlens.mode.statusBar.enabled": false,
   "gitlens.statusBar.enabled": false,
-  "java.errors.incompleteClasspath.severity": "ignore",
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
@@ -178,6 +173,11 @@
   },
   "gitlens.views.repositories.files.layout": "list",
   "vim.disableExtension": false,
-  "html.mirrorCursorOnMatchingTag": false,
-  "typescript.preferences.importModuleSpecifier": "relative"
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": 1,
+  "git.enableSmartCommit": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
