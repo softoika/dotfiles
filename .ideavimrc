@@ -5,4 +5,4 @@ inoremap <C-b> <C-o>h
 inoremap <C-f> <C-o>l
 nnoremap Y y$
 nnoremap <Return> o<ESC>
-
+set clipboard=unnamed
