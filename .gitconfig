@@ -2,7 +2,7 @@
 	excludesfile = ~/.gitignore_global
 	editor = nvim -c \"set fenc=utf-8\"
     commentChar = ">"
-    pager = delta --plus-color="#013800" --plus-emph-color="#016800" --minus-color="#440001" --minus-emph-color="#740001" --theme='Monokai Extended'
+    pager = delta
 [user]
 	name = softoika
 	email = zwgntz@gmail.com
