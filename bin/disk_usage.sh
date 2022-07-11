@@ -83,7 +83,8 @@ human_readable_bytes() {
   echo -e "${n}${color}${unit_char}${NOFORMAT}"
 }
 
-gdu -B 1 -d 1 "$target_path" 2>/dev/null | while read line; do
+## GNU du
+gdu -B 1 -d 1 "$target_path" 2>/dev/null | gsort -n -r -k 1 | while read line; do
   size=$(echo $line | awk '{ print $1 }')
   path=$(echo $line | awk '{ print $2 }')
   if [[ "$size" -gt "$unit_size" ]]; then
