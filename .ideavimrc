@@ -6,3 +6,5 @@ inoremap <C-f> <C-o>l
 nnoremap Y y$
 nnoremap <Return> o<ESC>
 set clipboard=unnamed
+set commentary
+set surround
