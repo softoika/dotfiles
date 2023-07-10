@@ -2,3 +2,5 @@
 .vim
 .DS_Store
 *.iml
+.classpath
+org.eclipse.wst.common.component

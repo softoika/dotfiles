@@ -128,7 +128,7 @@ alias dps='docker ps'
 alias dpsh='docker push'
 alias dpl='docker pull'
 alias di='docker images'
-alias ssh='change_tmux_prefix && ssh'
+# alias ssh='change_tmux_prefix && ssh'
 alias sed='gsed'
 alias y='yarn'
 alias ya='yarn add'
@@ -266,10 +266,13 @@ if [[ -z $TMUX ]]; then
   export PATH="${GOPATH}/bin:${PATH}"
   # vim-themis
   export PATH="${HOME}/Repositories/vim-themis/bin:${PATH}"
+  # apache ant
+  export PATH="/usr/local/apache-ant-1.10.12/bin:${PATH}"
+  export PATH="$HOME/.rbenv/bin:$PATH"
   # pyenvを実行しておく(pythonのパスを通しておくため)
-  pyenv
+  # pyenv
   # tmuxを自動起動する
-  tmux new-session
+  # tmux new-session
 fi
 
 # fnm setup

@@ -16,6 +16,9 @@ if [[ -d $vscode_dir ]]; then
 fi
 
 # Shell Scripts
+if [[ ! -d ~/.local ]]; then
+  mkdir ~/.local
+fi
 ln -fns "${PWD}/bin" "${HOME}/.local/bin"
 
 # .config
@@ -41,9 +44,9 @@ for directory in $(find .config -mindepth 1 -maxdepth 1 -type d); do
 done
 
 # tmux plugins ~/.tmux/plugins/tpm/tpm
-tmux_plugins="${HOME}/.tmux/plugins"
-if [[ ! -d $tmux_plugins ]]; then
-  mkdir -p $tmux_plugins
-fi
-cd $tmux_plugins
-git clone --depth 1 https://github.com/tmux-plugins/tpm
+# tmux_plugins="${HOME}/.tmux/plugins"
+# if [[ ! -d $tmux_plugins ]]; then
+  # mkdir -p $tmux_plugins
+# fi
+# cd $tmux_plugins
+# git clone --depth 1 https://github.com/tmux-plugins/tpm
