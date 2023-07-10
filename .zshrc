@@ -228,52 +228,47 @@ if [[ "${(L)$( uname -s )}" == darwin ]] && (( $+commands[arch] )); then
   }
 fi
 
-# tmux起動時にはPATHを追加しない
-if [[ -z $TMUX ]]; then
-  export PATH="$HOME/.pyenv/shims:$PATH"
-  export PATH="/usr/local/opt/mysql@5.7/bin/:$PATH"
-  export PATH="/usr/local/bin:$PATH"
-  export PATH="$HOME/.local/bin:$PATH"
-  # coreutils
-  export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
-  export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}"
-  # ed
-  export PATH="/usr/local/opt/ed/libexec/gnubin:${PATH}"
-  export MANPATH="/usr/local/opt/ed/libexec/gnuman:${MANPATH}"
-  # findutils
-  export PATH="/usr/local/opt/findutils/libexec/gnubin:${PATH}"
-  export MANPATH="/usr/local/opt/findutils/libexec/gnuman:${MANPATH}"
-  # sed
-  export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:${PATH}"
-  export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:${MANPATH}"
-  # tar
-  export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:${PATH}"
-  export MANPATH="/usr/local/opt/gnu-tar/libexec/gnuman:${MANPATH}"
-  # grep
-  export PATH="/usr/local/opt/grep/libexec/gnubin:${PATH}"
-  export MANPATH="/usr/local/opt/grep/libexec/gnuman:${MANPATH}"
-  export PATH=${JAVA_HOME}/bin:${PATH}
-  export GRAALVM_HOME="/Library/Java/JavaVirtualMachines/graalvm-ce-${GRAALVM_VERSION}/Contents/Home"
-  export PATH=${JAVA_HOME}/bin:${PATH}
-  # fnm
-  export PATH=/Users/r_hanafusa/.fnm:$PATH
-  # llvm
-  export PATH="/usr/local/opt/llvm/bin:$PATH"
-  export LDFLAGS="-L/usr/local/opt/llvm/lib"
-  export CPPFLAGS="-I/usr/local/opt/llvm/include"
-  # go
-  export GOPATH="${HOME}/go"
-  export PATH="${GOPATH}/bin:${PATH}"
-  # vim-themis
-  export PATH="${HOME}/Repositories/vim-themis/bin:${PATH}"
-  # apache ant
-  export PATH="/usr/local/apache-ant-1.10.12/bin:${PATH}"
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  # pyenvを実行しておく(pythonのパスを通しておくため)
-  # pyenv
-  # tmuxを自動起動する
-  # tmux new-session
-fi
+export PATH="$HOME/.pyenv/shims:$PATH"
+export PATH="/usr/local/opt/mysql@5.7/bin/:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+# coreutils
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}"
+# ed
+export PATH="/usr/local/opt/ed/libexec/gnubin:${PATH}"
+export MANPATH="/usr/local/opt/ed/libexec/gnuman:${MANPATH}"
+# findutils
+export PATH="/usr/local/opt/findutils/libexec/gnubin:${PATH}"
+export MANPATH="/usr/local/opt/findutils/libexec/gnuman:${MANPATH}"
+# sed
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:${PATH}"
+export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:${MANPATH}"
+# tar
+export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:${PATH}"
+export MANPATH="/usr/local/opt/gnu-tar/libexec/gnuman:${MANPATH}"
+# grep
+export PATH="/usr/local/opt/grep/libexec/gnubin:${PATH}"
+export MANPATH="/usr/local/opt/grep/libexec/gnuman:${MANPATH}"
+export PATH=${JAVA_HOME}/bin:${PATH}
+export GRAALVM_HOME="/Library/Java/JavaVirtualMachines/graalvm-ce-${GRAALVM_VERSION}/Contents/Home"
+export PATH=${JAVA_HOME}/bin:${PATH}
+# fnm
+export PATH=/Users/r_hanafusa/.fnm:$PATH
+# llvm
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/llvm/lib"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"
+# go
+export GOPATH="${HOME}/go"
+export PATH="${GOPATH}/bin:${PATH}"
+# vim-themis
+export PATH="${HOME}/Repositories/vim-themis/bin:${PATH}"
+# apache ant
+export PATH="/usr/local/apache-ant-1.10.12/bin:${PATH}"
+export PATH="$HOME/.rbenv/bin:$PATH"
+# adb
+export PATH="${HOME}/Library/Android/sdk/platform-tools:${PATH}"
 
 # fnm setup
 eval "$(fnm env)"
