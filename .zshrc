@@ -154,6 +154,8 @@ alias doc="cd ~/Documents"
 alias brew='brew.sh'
 alias touch='dirtouch'
 
+export LC_ALL=ja_JP.UTF-8
+export LANG=ja_JP.UTF-8
 # historyに時刻を表示するようにする
 export HISTTIMEFORMAT='%F %T '
 # TMUX用色設定
@@ -266,9 +268,12 @@ export PATH="${GOPATH}/bin:${PATH}"
 export PATH="${HOME}/Repositories/vim-themis/bin:${PATH}"
 # apache ant
 export PATH="/usr/local/apache-ant-1.10.12/bin:${PATH}"
-export PATH="$HOME/.rbenv/bin:$PATH"
 # adb
 export PATH="${HOME}/Library/Android/sdk/platform-tools:${PATH}"
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 # fnm setup
 eval "$(fnm env)"
